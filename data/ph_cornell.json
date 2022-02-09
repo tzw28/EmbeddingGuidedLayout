@@ -1,0 +1,2711 @@
+{
+  "nodes": [
+    {
+      "x": -1867.9292,
+      "y": 651.88184,
+      "id": "http://cam.cornell.edu/ph/index.html",
+      "group": 0
+    },
+    {
+      "x": -1268.9879,
+      "y": 520.7864,
+      "id": "http://www.cs.cornell.edu/info/people/vavasis/vavasis.html",
+      "group": 1
+    },
+    {
+      "x": -1666.6589,
+      "y": 672.9037,
+      "id": "http://www.cs.cornell.edu/info/people/lnt/lnt.html",
+      "group": 1
+    },
+    {
+      "x": -2144.2256,
+      "y": 744.1873,
+      "id": "http://cam.cornell.edu/~baggett/index.html",
+      "group": 0
+    },
+    {
+      "x": -358.10223,
+      "y": -834.9353,
+      "id": "http://cs-tr.cs.cornell.edu",
+      "group": 2
+    },
+    {
+      "x": -751.3028,
+      "y": -1373.4171,
+      "id": "http://dri.cornell.edu/pub/people/davis.html",
+      "group": 3
+    },
+    {
+      "x": 202.13446,
+      "y": 399.06943,
+      "id": "http://www.cs.cornell.edu",
+      "group": 4
+    },
+    {
+      "x": -333.16437,
+      "y": -226.35562,
+      "id": "http://www.cs.cornell.edu/info/people/alexey/alexey.html",
+      "group": 0
+    },
+    {
+      "x": -71.2116,
+      "y": -578.05896,
+      "id": "http://www.cs.cornell.edu/info/people/brd/brd.html",
+      "group": 1
+    },
+    {
+      "x": 11.370434,
+      "y": -1174.7831,
+      "id": "http://www.cs.cornell.edu/info/people/crary/home.html",
+      "group": 0
+    },
+    {
+      "x": -251.82187,
+      "y": -598.07477,
+      "id": "http://www.cs.cornell.edu/info/people/dean/dean.html",
+      "group": 1
+    },
+    {
+      "x": -619.0449,
+      "y": -1226.6998,
+      "id": "http://www.cs.cornell.edu/info/people/dean/home.html",
+      "group": 3
+    },
+    {
+      "x": -258.59952,
+      "y": -595.5689,
+      "id": "http://www.cs.cornell.edu/info/people/kleinber/kleinber.html",
+      "group": 1
+    },
+    {
+      "x": -542.0798,
+      "y": -1165.1533,
+      "id": "http://www.cs.cornell.edu/info/people/rus/home.html",
+      "group": 3
+    },
+    {
+      "x": -693.92755,
+      "y": -1287.342,
+      "id": "http://www.cs.cornell.edu/info/projects/icap.html",
+      "group": 2
+    },
+    {
+      "x": -1338.7317,
+      "y": 1783.2993,
+      "id": "http://cs.cornell.edu/info/courses/current/cs415/cs414.html",
+      "group": 4
+    },
+    {
+      "x": -1215.7502,
+      "y": 1641.1531,
+      "id": "http://www.cs.cornell.edu/info/people/diyu/y.html",
+      "group": 0
+    },
+    {
+      "x": 2909.0217,
+      "y": 971.01294,
+      "id": "http://cs.cornell.edu/info/courses/fall-95/cs415/cs415.html",
+      "group": 4
+    },
+    {
+      "x": 2456.0007,
+      "y": 869.0004,
+      "id": "http://www.cs.cornell.edu/info/people/indira/homepage.html",
+      "group": 0
+    },
+    {
+      "x": 2683.1533,
+      "y": 940.8347,
+      "id": "http://www.cs.cornell.edu/info/people/seena/homepage.html",
+      "group": 0
+    },
+    {
+      "x": -852.3177,
+      "y": 1278.3651,
+      "id": "http://cs.cornell.edu/info/courses/spring-96/cs432/cs432.html",
+      "group": 4
+    },
+    {
+      "x": -1158.0531,
+      "y": 1548.4541,
+      "id": "http://www.cs.cornell.edu/info/people/lucy/lucy.html",
+      "group": 0
+    },
+    {
+      "x": -637.39667,
+      "y": 1059.315,
+      "id": "http://www.cs.cornell.edu/info/people/singhal/singhal.html",
+      "group": 0
+    },
+    {
+      "x": -606.4994,
+      "y": -1268.0485,
+      "id": "http://dri.cornell.edu",
+      "group": 2
+    },
+    {
+      "x": 2563.1772,
+      "y": -580.4729,
+      "id": "http://simon.cs.cornell.edu/info/courses/current/cs401",
+      "group": 4
+    },
+    {
+      "x": 1763.9956,
+      "y": -99.88091,
+      "id": "http://www.cs.cornell.edu/info/people/imalik/indira.html",
+      "group": 0
+    },
+    {
+      "x": 1676.3099,
+      "y": 1222.2139,
+      "id": "http://simon.cs.cornell.edu/info/courses/spring-96/cs515",
+      "group": 4
+    },
+    {
+      "x": 1793.4869,
+      "y": 1155.9047,
+      "id": "http://www.cs.cornell.edu/info/people/joseluis/joseluis.html",
+      "group": 0
+    },
+    {
+      "x": 1169.8068,
+      "y": 1012.9602,
+      "id": "http://www.cs.cornell.edu/info/people/jrdiazh/jrdiazh.html",
+      "group": 0
+    },
+    {
+      "x": 547.97614,
+      "y": 2199.9956,
+      "id": "http://simon.cs.cornell.edu/info/people/vogels",
+      "group": 3
+    },
+    {
+      "x": 324.79086,
+      "y": 1585.716,
+      "id": "http://www.cs.cornell.edu/info/people/kguo/home.html",
+      "group": 0
+    },
+    {
+      "x": 445.12427,
+      "y": 2331.3057,
+      "id": "http://www.cs.cornell.edu/info/people/mhuang/stanley.html",
+      "group": 0
+    },
+    {
+      "x": 1132.4128,
+      "y": 2069.7195,
+      "id": "http://www.cs.cornell.edu/info/faculty/brian_smith.html",
+      "group": 1
+    },
+    {
+      "x": 170.02742,
+      "y": 1378.1921,
+      "id": "http://www.cs.cornell.edu/info/people/rvr/rvr.html",
+      "group": 3
+    },
+    {
+      "x": 614.84845,
+      "y": 2426.937,
+      "id": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "group": 1
+    },
+    {
+      "x": 294.4717,
+      "y": -6.0937657,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs100b/home.html",
+      "group": 4
+    },
+    {
+      "x": -713.55774,
+      "y": 535.1909,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs211/home.html",
+      "group": 4
+    },
+    {
+      "x": 894.41907,
+      "y": -156.73656,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs472/cs472.html",
+      "group": 4
+    },
+    {
+      "x": 339.42773,
+      "y": 374.42517,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs481/cs481.html",
+      "group": 4
+    },
+    {
+      "x": 1001.7202,
+      "y": -54.186607,
+      "id": "http://www.cs.cornell.edu/info/courses/fall-95/cs472/cs472.html",
+      "group": 4
+    },
+    {
+      "x": 604.9693,
+      "y": -215.32916,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs211/cs211.html",
+      "group": 4
+    },
+    {
+      "x": 784.0458,
+      "y": 179.01933,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs674/cs674.html",
+      "group": 4
+    },
+    {
+      "x": 435.83258,
+      "y": 1106.0023,
+      "id": "http://www.cs.cornell.edu/info/courses/summer-96/cs99/cs99.html",
+      "group": 4
+    },
+    {
+      "x": -539.1444,
+      "y": 952.2602,
+      "id": "http://www.cs.cornell.edu/info/department/annual94/faculty/salton.html",
+      "group": 1
+    },
+    {
+      "x": 317.7523,
+      "y": 576.141,
+      "id": "http://www.cs.cornell.edu/info/department/annual94/researchers/li.html",
+      "group": 3
+    },
+    {
+      "x": 542.1082,
+      "y": 473.0809,
+      "id": "http://www.cs.cornell.edu/info/department/annual94/researchers/zippel.html",
+      "group": 3
+    },
+    {
+      "x": 358.98782,
+      "y": 190.90993,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/birman.html",
+      "group": 1
+    },
+    {
+      "x": -525.2897,
+      "y": 493.0291,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/greenberg.html",
+      "group": 1
+    },
+    {
+      "x": 567.2401,
+      "y": 1040.662,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/hartmanis.html",
+      "group": 1
+    },
+    {
+      "x": -317.30618,
+      "y": 531.3765,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/hopcroft.html",
+      "group": 1
+    },
+    {
+      "x": -548.1699,
+      "y": 208.64339,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/pingali.html",
+      "group": 1
+    },
+    {
+      "x": -548.9409,
+      "y": -163.17598,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/schneider.html",
+      "group": 1
+    },
+    {
+      "x": -223.9032,
+      "y": 732.1163,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/vanloan.html",
+      "group": 1
+    },
+    {
+      "x": -322.91095,
+      "y": 900.6211,
+      "id": "http://www.cs.cornell.edu/info/department/annual95/faculty/wagner.html",
+      "group": 1
+    },
+    {
+      "x": -125.45092,
+      "y": 1196.9708,
+      "id": "http://www.cs.cornell.edu/info/people/aflorenc/home.html",
+      "group": 0
+    },
+    {
+      "x": 1399.1335,
+      "y": 404.96674,
+      "id": "http://www.cs.cornell.edu/info/people/ahuja/ahuja.html",
+      "group": 0
+    },
+    {
+      "x": -191.99556,
+      "y": -69.599754,
+      "id": "http://www.cs.cornell.edu/info/people/alan/home.html",
+      "group": 0
+    },
+    {
+      "x": 1156.0009,
+      "y": 771.52594,
+      "id": "http://www.cs.cornell.edu/info/people/avinash/avinash.html",
+      "group": 0
+    },
+    {
+      "x": 544.2029,
+      "y": 1670.246,
+      "id": "http://www.cs.cornell.edu/info/people/barber/welcome.html",
+      "group": 0
+    },
+    {
+      "x": 348.4362,
+      "y": 373.40793,
+      "id": "http://www.cs.cornell.edu/info/people/bhao/bhao.html",
+      "group": 0
+    },
+    {
+      "x": -300.12006,
+      "y": 1104.5193,
+      "id": "http://www.cs.cornell.edu/info/people/chew/chew.html",
+      "group": 3
+    },
+    {
+      "x": 1267.0723,
+      "y": -138.26093,
+      "id": "http://www.cs.cornell.edu/info/people/ckliau/ckliau.html",
+      "group": 0
+    },
+    {
+      "x": -1380.4513,
+      "y": 659.23846,
+      "id": "http://www.cs.cornell.edu/info/people/divakar/divakar.html",
+      "group": 0
+    },
+    {
+      "x": -647.7449,
+      "y": 726.9044,
+      "id": "http://www.cs.cornell.edu/info/people/eva/eva.html",
+      "group": 1
+    },
+    {
+      "x": 110.468575,
+      "y": 937.7565,
+      "id": "http://www.cs.cornell.edu/info/people/fcc/fcc.html",
+      "group": 0
+    },
+    {
+      "x": -447.20245,
+      "y": 710.19543,
+      "id": "http://www.cs.cornell.edu/info/people/fred/fred.html",
+      "group": 0
+    },
+    {
+      "x": -659.22003,
+      "y": 37.50492,
+      "id": "http://www.cs.cornell.edu/info/people/ghias/home.html",
+      "group": 0
+    },
+    {
+      "x": -721.5737,
+      "y": 316.64444,
+      "id": "http://www.cs.cornell.edu/info/people/gries/gries.html",
+      "group": 1
+    },
+    {
+      "x": 581.787,
+      "y": 1923.2714,
+      "id": "http://www.cs.cornell.edu/info/people/grzes/grzes.html",
+      "group": 0
+    },
+    {
+      "x": 761.2608,
+      "y": 13.131984,
+      "id": "http://www.cs.cornell.edu/info/people/huang/huang.html",
+      "group": 0
+    },
+    {
+      "x": -101.937355,
+      "y": 553.7475,
+      "id": "http://www.cs.cornell.edu/info/people/hu/hu.html",
+      "group": 0
+    },
+    {
+      "x": 1327.8425,
+      "y": 1173.1747,
+      "id": "http://www.cs.cornell.edu/info/people/ioi/home.html",
+      "group": 0
+    },
+    {
+      "x": 455.8402,
+      "y": -671.8789,
+      "id": "http://www.cs.cornell.edu/info/people/jgm/home.html",
+      "group": 1
+    },
+    {
+      "x": 271.4968,
+      "y": 1075.8772,
+      "id": "http://www.cs.cornell.edu/info/people/jiawang/jiawang.html",
+      "group": 0
+    },
+    {
+      "x": 590.87805,
+      "y": -421.79474,
+      "id": "http://www.cs.cornell.edu/info/people/jmiller/jmiller.html",
+      "group": 0
+    },
+    {
+      "x": 1383.7532,
+      "y": 756.8943,
+      "id": "http://www.cs.cornell.edu/info/people/jshapiro/jshapiro.htm",
+      "group": 0
+    },
+    {
+      "x": -68.94158,
+      "y": -247.91156,
+      "id": "http://www.cs.cornell.edu/info/people/julian/julian.html",
+      "group": 0
+    },
+    {
+      "x": 8.690868,
+      "y": -1047.2201,
+      "id": "http://www.cs.cornell.edu/info/people/jyh/jyh.html",
+      "group": 0
+    },
+    {
+      "x": 123.5008,
+      "y": -335.27917,
+      "id": "http://www.cs.cornell.edu/info/people/karl/home.html",
+      "group": 0
+    },
+    {
+      "x": 119.37502,
+      "y": 1250.4261,
+      "id": "http://www.cs.cornell.edu/info/people/karr/karr.html",
+      "group": 0
+    },
+    {
+      "x": 1683.9778,
+      "y": 780.7906,
+      "id": "http://www.cs.cornell.edu/info/people/kartikhk/homepg.html",
+      "group": 0
+    },
+    {
+      "x": 305.33395,
+      "y": -338.53876,
+      "id": "http://www.cs.cornell.edu/info/people/kota/kota.html",
+      "group": 0
+    },
+    {
+      "x": 500.00797,
+      "y": -960.0346,
+      "id": "http://www.cs.cornell.edu/info/people/kozen/kozen.html",
+      "group": 1
+    },
+    {
+      "x": -115.52573,
+      "y": 962.9759,
+      "id": "http://www.cs.cornell.edu/info/people/kreitz/index.html",
+      "group": 3
+    },
+    {
+      "x": 418.20615,
+      "y": -161.56967,
+      "id": "http://www.cs.cornell.edu/info/people/lagoze/home.html",
+      "group": 3
+    },
+    {
+      "x": 877.92474,
+      "y": -15.442469,
+      "id": "http://www.cs.cornell.edu/info/people/ldzhou/index.html",
+      "group": 0
+    },
+    {
+      "x": 14.910415,
+      "y": -45.76526,
+      "id": "http://www.cs.cornell.edu/info/people/lhwang/lhwang.html",
+      "group": 0
+    },
+    {
+      "x": -403.0929,
+      "y": -32.093155,
+      "id": "http://www.cs.cornell.edu/info/people/millett/home.html",
+      "group": 0
+    },
+    {
+      "x": 372.50122,
+      "y": 899.9774,
+      "id": "http://www.cs.cornell.edu/info/people/mishaal/home.html",
+      "group": 0
+    },
+    {
+      "x": -99.70898,
+      "y": 132.89421,
+      "id": "http://www.cs.cornell.edu/info/people/nihowe/nihowe.html",
+      "group": 0
+    },
+    {
+      "x": 30.178524,
+      "y": 1093.746,
+      "id": "http://www.cs.cornell.edu/info/people/nikosc/nikosc.html",
+      "group": 3
+    },
+    {
+      "x": -435.3328,
+      "y": 214.61763,
+      "id": "http://www.cs.cornell.edu/info/people/prakas/home.html",
+      "group": 0
+    },
+    {
+      "x": 1047.3691,
+      "y": -110.13599,
+      "id": "http://www.cs.cornell.edu/info/people/praveen/praveen.html",
+      "group": 1
+    },
+    {
+      "x": -16.909794,
+      "y": 762.81445,
+      "id": "http://www.cs.cornell.edu/info/people/ralph/index.html",
+      "group": 0
+    },
+    {
+      "x": 916.744,
+      "y": 398.41586,
+      "id": "http://www.cs.cornell.edu/info/people/ravi/home.html",
+      "group": 0
+    },
+    {
+      "x": 843.064,
+      "y": 473.0287,
+      "id": "http://www.cs.cornell.edu/info/people/ronitt/homepage.html",
+      "group": 1
+    },
+    {
+      "x": 167.5203,
+      "y": -172.48216,
+      "id": "http://www.cs.cornell.edu/info/people/roy/roy.html",
+      "group": 3
+    },
+    {
+      "x": 1723.2379,
+      "y": 386.08258,
+      "id": "http://www.cs.cornell.edu/info/people/scl/sean.html",
+      "group": 0
+    },
+    {
+      "x": 95.39128,
+      "y": 552.46857,
+      "id": "http://www.cs.cornell.edu/info/people/shim/shim.html",
+      "group": 0
+    },
+    {
+      "x": 623.67664,
+      "y": 851.3466,
+      "id": "http://www.cs.cornell.edu/info/people/skl/skl.html",
+      "group": 0
+    },
+    {
+      "x": 202.69023,
+      "y": 754.7524,
+      "id": "http://www.cs.cornell.edu/info/people/sonia/my.html",
+      "group": 0
+    },
+    {
+      "x": -333.92712,
+      "y": 186.1535,
+      "id": "http://www.cs.cornell.edu/info/people/stodghil/home.html",
+      "group": 0
+    },
+    {
+      "x": 808.10034,
+      "y": 1489.3301,
+      "id": "http://www.cs.cornell.edu/info/people/sugata/home.html",
+      "group": 0
+    },
+    {
+      "x": 648.2296,
+      "y": 647.8623,
+      "id": "http://www.cs.cornell.edu/info/people/swartz/swartz.html",
+      "group": 0
+    },
+    {
+      "x": -1043.2433,
+      "y": -264.70142,
+      "id": "http://www.cs.cornell.edu/info/people/tah/tah.html",
+      "group": 1
+    },
+    {
+      "x": 57.841217,
+      "y": 308.1856,
+      "id": "http://www.cs.cornell.edu/info/people/tt/tim_teitelbaum.html",
+      "group": 1
+    },
+    {
+      "x": 519.10846,
+      "y": 67.71284,
+      "id": "http://www.cs.cornell.edu/info/people/ulfar/index.html",
+      "group": 0
+    },
+    {
+      "x": -367.37277,
+      "y": 295.52917,
+      "id": "http://www.cs.cornell.edu/info/people/vladimir/vladimir.html",
+      "group": 0
+    },
+    {
+      "x": 657.7739,
+      "y": -103.55431,
+      "id": "http://www.cs.cornell.edu/info/people/weichen/weichen.html",
+      "group": 0
+    },
+    {
+      "x": -135.28941,
+      "y": 358.471,
+      "id": "http://www.cs.cornell.edu/info/people/whkao/whkao.html",
+      "group": 0
+    },
+    {
+      "x": 982.09564,
+      "y": 934.97015,
+      "id": "http://www.cs.cornell.edu/info/people/wwlee/wwlee.html",
+      "group": 0
+    },
+    {
+      "x": 1310.6079,
+      "y": 618.66797,
+      "id": "http://www.cs.cornell.edu/info/people/xichun/xichun.html",
+      "group": 0
+    },
+    {
+      "x": -495.00397,
+      "y": 1399.7424,
+      "id": "http://www.cs.cornell.edu/info/people/yanhong/index-postdoc.html",
+      "group": 3
+    },
+    {
+      "x": 452.32614,
+      "y": 714.9405,
+      "id": "http://www.cs.cornell.edu/info/people/ychuang/ychuang.html",
+      "group": 0
+    },
+    {
+      "x": 139.41478,
+      "y": 129.06808,
+      "id": "http://www.cs.cornell.edu/info/people/ychung/ychung.html",
+      "group": 0
+    },
+    {
+      "x": 587.1543,
+      "y": 278.9311,
+      "id": "http://www.cs.cornell.edu/info/people/yminsky/yminsky.html",
+      "group": 0
+    },
+    {
+      "x": 1240.9398,
+      "y": -1029.9807,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs280/cs280.html",
+      "group": 4
+    },
+    {
+      "x": 946.2383,
+      "y": -535.53894,
+      "id": "http://www.cs.cornell.edu/info/people/sam/sam.html",
+      "group": 1
+    },
+    {
+      "x": 1779.9674,
+      "y": -317.10886,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs401/home.html",
+      "group": 4
+    },
+    {
+      "x": 1766.0461,
+      "y": -291.52408,
+      "id": "http://www.cs.cornell.edu/info/people/ashish/ashish.html",
+      "group": 0
+    },
+    {
+      "x": 1968.7703,
+      "y": -367.05423,
+      "id": "http://www.cs.cornell.edu/info/people/bhardwaj/bhardwaj.html",
+      "group": 0
+    },
+    {
+      "x": 1743.1239,
+      "y": 47.781086,
+      "id": "http://www.cs.cornell.edu/info/people/gbd/gbd.html",
+      "group": 0
+    },
+    {
+      "x": 1790.7546,
+      "y": -492.99948,
+      "id": "http://www.cs.cornell.edu/info/people/yuichi/yuichi.html",
+      "group": 0
+    },
+    {
+      "x": 823.6529,
+      "y": -775.43945,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs410/home.html",
+      "group": 4
+    },
+    {
+      "x": 1978.337,
+      "y": -872.24866,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs415/cs414.html",
+      "group": 4
+    },
+    {
+      "x": 1892.0571,
+      "y": -858.4749,
+      "id": "http://www.cs.cornell.edu/info/people/lxwu/home.html",
+      "group": 0
+    },
+    {
+      "x": 1668.1312,
+      "y": -91.0732,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html",
+      "group": 4
+    },
+    {
+      "x": 953.3544,
+      "y": -1310.5153,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs611/home.html",
+      "group": 4
+    },
+    {
+      "x": 1018.66473,
+      "y": -1059.9423,
+      "id": "http://www.cs.cornell.edu/info/people/fms/fms.html",
+      "group": 0
+    },
+    {
+      "x": 1186.1829,
+      "y": -1653.6277,
+      "id": "http://www.cs.cornell.edu/info/people/lili/ll.html",
+      "group": 0
+    },
+    {
+      "x": 1501.7485,
+      "y": -421.8514,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs631/home.html",
+      "group": 4
+    },
+    {
+      "x": 2244.3142,
+      "y": -276.50418,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs631/welcome.html",
+      "group": 4
+    },
+    {
+      "x": 1282.891,
+      "y": -1771.5996,
+      "id": "http://www.cs.cornell.edu/info/courses/current/cs681/cs681.html",
+      "group": 4
+    },
+    {
+      "x": 646.15814,
+      "y": 2888.7112,
+      "id": "http://www.cs.cornell.edu/info/courses/fall-94/cs617",
+      "group": 4
+    },
+    {
+      "x": 607.685,
+      "y": 2488.3008,
+      "id": "http://www.cs.cornell.edu/info/courses/fall-95/cs314",
+      "group": 4
+    },
+    {
+      "x": 1598.1965,
+      "y": 1079.4407,
+      "id": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html",
+      "group": 4
+    },
+    {
+      "x": 1615.7134,
+      "y": 1332.5074,
+      "id": "http://www.cs.cornell.edu/info/people/jmm/jmm.html",
+      "group": 0
+    },
+    {
+      "x": 2007.9487,
+      "y": 1446.6915,
+      "id": "http://www.cs.cornell.edu/info/people/samuel",
+      "group": 1
+    },
+    {
+      "x": 1986.0747,
+      "y": 1040.9323,
+      "id": "http://www.cs.cornell.edu/info/people/suzuki/suzuki.html",
+      "group": 0
+    },
+    {
+      "x": 1181.281,
+      "y": 2677.6985,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-95/cs314/home.html",
+      "group": 4
+    },
+    {
+      "x": 2171.867,
+      "y": 1605.8993,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs100/cs100.html",
+      "group": 4
+    },
+    {
+      "x": 609.36365,
+      "y": -1357.5123,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs212/cs212.html",
+      "group": 4
+    },
+    {
+      "x": 548.6298,
+      "y": -643.23267,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs512/home.html",
+      "group": 4
+    },
+    {
+      "x": 2667.0115,
+      "y": 965.8411,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs514/index.html",
+      "group": 4
+    },
+    {
+      "x": 1225.4277,
+      "y": 1353.3197,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs516",
+      "group": 4
+    },
+    {
+      "x": 785.19025,
+      "y": 1931.2178,
+      "id": "http://www.cs.cornell.edu/info/projects/sp-2",
+      "group": 2
+    },
+    {
+      "x": 2066.6562,
+      "y": 7.5304966,
+      "id": "http://www.cs.cornell.edu/info/courses/spring-96/cs664/cs664.html",
+      "group": 4
+    },
+    {
+      "x": 2843.118,
+      "y": -189.60637,
+      "id": "http://www.cs.cornell.edu/info/people/dph/dph.html",
+      "group": 1
+    },
+    {
+      "x": 1198.875,
+      "y": -314.9995,
+      "id": "http://www.cs.cornell.edu/info/people/rdz/rdz.html",
+      "group": 1
+    },
+    {
+      "x": 1239.5197,
+      "y": 58.95928,
+      "id": "http://www.cs.cornell.edu/info/people/cardie/cardie.html",
+      "group": 1
+    },
+    {
+      "x": 1653.785,
+      "y": 1670.3137,
+      "id": "http://www.cs.cornell.edu/info/people/ankit/index.html",
+      "group": 0
+    },
+    {
+      "x": -108.15593,
+      "y": -1551.3033,
+      "id": "http://www.cs.cornell.edu/info/faculty/rc/rc.html",
+      "group": 1
+    },
+    {
+      "x": 1779.9807,
+      "y": 861.05725,
+      "id": "http://www.cs.cornell.edu/info/people/amith/yam.html",
+      "group": 0
+    },
+    {
+      "x": 2040.6343,
+      "y": 827.6815,
+      "id": "http://www.tc.cornell.edu/visualization/education/cs417",
+      "group": 4
+    },
+    {
+      "x": 2153.7026,
+      "y": 815.57605,
+      "id": "http://www.tc.cornell.edu/visualization/education/cs418",
+      "group": 4
+    },
+    {
+      "x": 582.82227,
+      "y": 2364.857,
+      "id": "http://www.cs.cornell.edu/info/projects/u-net",
+      "group": 2
+    },
+    {
+      "x": 109.965004,
+      "y": -698.31067,
+      "id": "http://www.cs.cornell.edu/info/projects/csrvl/csrvl.html",
+      "group": 2
+    },
+    {
+      "x": 694.5835,
+      "y": 2765.4036,
+      "id": "http://www.cs.cornell.edu/info/people/chichao/chichao.html",
+      "group": 0
+    },
+    {
+      "x": 667.81024,
+      "y": 2464.466,
+      "id": "http://www.cs.cornell.edu/info/projects/cam",
+      "group": 2
+    },
+    {
+      "x": 683.1977,
+      "y": 2479.2493,
+      "id": "http://www.cs.cornell.edu/info/projects/split-c",
+      "group": 2
+    },
+    {
+      "x": -250.86949,
+      "y": -2207.629,
+      "id": "http://www.cs.cornell.edu/info/projects/nuprl/nuprl.html",
+      "group": 2
+    },
+    {
+      "x": 1087.0397,
+      "y": 423.49768,
+      "id": "http://www.cs.cornell.edu/info/people/ergun/ergun.html",
+      "group": 0
+    },
+    {
+      "x": -362.46924,
+      "y": -2636.7937,
+      "id": "http://www.cs.cornell.edu/info/people/hayden/hayden.html",
+      "group": 0
+    },
+    {
+      "x": 952.52527,
+      "y": 927.441,
+      "id": "http://www.cs.cornell.edu/info/people/hejik/hejik.html",
+      "group": 0
+    },
+    {
+      "x": 2386.5945,
+      "y": 833.3847,
+      "id": "http://www.cs.cornell.edu/info/people/icchen/icchen.html",
+      "group": 0
+    },
+    {
+      "x": -353.7986,
+      "y": -2639.0017,
+      "id": "http://www.cs.cornell.edu/info/people/jackson/jackson.html",
+      "group": 3
+    },
+    {
+      "x": 1641.9043,
+      "y": 2198.717,
+      "id": "http://www.cs.cornell.edu/info/people/janosi/home.html",
+      "group": 0
+    },
+    {
+      "x": 1391.8794,
+      "y": 1986.9027,
+      "id": "http://www.cs.cornell.edu/info/projects/zeno/zeno.html",
+      "group": 2
+    },
+    {
+      "x": 1489.1946,
+      "y": -832.94116,
+      "id": "http://www.cs.cornell.edu/info/people/kettnake/kettnake.html",
+      "group": 0
+    },
+    {
+      "x": -2145.611,
+      "y": 733.9719,
+      "id": "http://www.tc.cornell.edu/~anne",
+      "group": 3
+    },
+    {
+      "x": -231.76231,
+      "y": 1659.486,
+      "id": "http://www.cs.cornell.edu/info/people/nikosc/projects/prema/index.html",
+      "group": 2
+    },
+    {
+      "x": -1068.6644,
+      "y": 51.378983,
+      "id": "http://www.cs.cornell.edu/info/people/prakas/cs414/cs414.html",
+      "group": 4
+    },
+    {
+      "x": 1290.9395,
+      "y": -608.17004,
+      "id": "http://www.cs.cornell.edu/info/people/praveen/projects/seq.html",
+      "group": 2
+    },
+    {
+      "x": 267.70157,
+      "y": 1381.2423,
+      "id": "http://www.cs.cornell.edu/info/people/takako/home.html",
+      "group": 0
+    },
+    {
+      "x": -296.96265,
+      "y": 2040.1082,
+      "id": "http://www.cs.cornell.edu/info/projects/horus/arpa/arpa.html",
+      "group": 2
+    },
+    {
+      "x": -1034.6222,
+      "y": -1666.1697,
+      "id": "http://www.cs.cornell.edu/info/people/summers/summers.html",
+      "group": 0
+    },
+    {
+      "x": -1377.2556,
+      "y": -425.47803,
+      "id": "http://www.cs.cornell.edu/info/people/tah/cs611.html",
+      "group": 4
+    },
+    {
+      "x": -1372.6313,
+      "y": -433.41995,
+      "id": "http://www.cs.cornell.edu/info/people/tah/hytech.html",
+      "group": 2
+    },
+    {
+      "x": -1586.9724,
+      "y": 481.3424,
+      "id": "http://www.cs.cornell.edu/info/people/vavasis/qmg-home.html",
+      "group": 2
+    },
+    {
+      "x": -750.4051,
+      "y": 1771.0431,
+      "id": "http://www.cs.cornell.edu/info/people/yanhong/cachet.html",
+      "group": 2
+    },
+    {
+      "x": -492.5157,
+      "y": 2283.4143,
+      "id": "http://www.cs.cornell.edu/info/projects/medianet",
+      "group": 2
+    },
+    {
+      "x": -345.09955,
+      "y": -2641.092,
+      "id": "http://www.cs.cornell.edu/info/projects/nuprl/cs611/cs611.html",
+      "group": 4
+    },
+    {
+      "x": 2310.8245,
+      "y": 828.38916,
+      "id": "http://www.tc.cornell.edu/~bruce",
+      "group": 3
+    }
+  ],
+  "groups": [],
+  "links": [
+    {
+      "source": "http://cam.cornell.edu/ph/index.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/vavasis/vavasis.html"
+    },
+    {
+      "source": "http://cam.cornell.edu/ph/index.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/lnt/lnt.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/vavasis/vavasis.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/vavasis/vavasis.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/vavasis/qmg-home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/lnt/lnt.html",
+      "value": 1,
+      "target": "http://cam.cornell.edu/~baggett/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/lnt/lnt.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/lnt/lnt.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/divakar/divakar.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/lnt/lnt.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/~anne"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://dri.cornell.edu/pub/people/davis.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/alexey/alexey.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/brd/brd.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/crary/home.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/dean/dean.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/dean/home.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kleinber/kleinber.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rus/home.html"
+    },
+    {
+      "source": "http://cs-tr.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/icap.html"
+    },
+    {
+      "source": "http://dri.cornell.edu/pub/people/davis.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/dean/home.html"
+    },
+    {
+      "source": "http://dri.cornell.edu/pub/people/davis.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/icap.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://cs.cornell.edu/info/courses/spring-96/cs432/cs432.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs100b/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs211/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs472/cs472.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs481/cs481.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs472/cs472.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs211/cs211.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs674/cs674.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/summer-96/cs99/cs99.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual94/faculty/salton.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual94/researchers/li.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual94/researchers/zippel.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/birman.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/greenberg.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/hartmanis.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/hopcroft.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/pingali.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/schneider.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/vanloan.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual95/faculty/wagner.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/aflorenc/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ahuja/ahuja.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/alan/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/avinash/avinash.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/barber/welcome.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/bhao/bhao.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/brd/brd.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/chew/chew.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ckliau/ckliau.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/crary/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/dean/dean.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/divakar/divakar.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/eva/eva.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/fcc/fcc.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/fred/fred.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ghias/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/gries/gries.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/grzes/grzes.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/huang/huang.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/hu/hu.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/imalik/indira.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ioi/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jgm/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jiawang/jiawang.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jmiller/jmiller.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jrdiazh/jrdiazh.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jshapiro/jshapiro.htm"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/julian/julian.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jyh/jyh.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/karl/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/karr/karr.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kartikhk/homepg.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kguo/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kleinber/kleinber.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kota/kota.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kozen/kozen.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kreitz/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/lagoze/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ldzhou/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/lhwang/lhwang.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/millett/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/mishaal/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/nihowe/nihowe.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/nikosc/nikosc.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/prakas/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/praveen/praveen.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ralph/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ravi/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ronitt/homepage.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/roy/roy.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rvr/rvr.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/scl/sean.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/shim/shim.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/singhal/singhal.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/skl/skl.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/sonia/my.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/stodghil/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/sugata/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/swartz/swartz.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/tah/tah.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/tt/tim_teitelbaum.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ulfar/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/vladimir/vladimir.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/weichen/weichen.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/whkao/whkao.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/wwlee/wwlee.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/xichun/xichun.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/yanhong/index-postdoc.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ychuang/ychuang.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ychung/ychung.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/yminsky/yminsky.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/alexey/alexey.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rvr/rvr.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/brd/brd.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/karl/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/brd/brd.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/csrvl/csrvl.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/crary/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/faculty/rc/rc.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/crary/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jgm/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/crary/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jyh/jyh.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/crary/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kozen/kozen.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/crary/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/nuprl/nuprl.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/dean/home.html",
+      "value": 1,
+      "target": "http://dri.cornell.edu"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/dean/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/icap.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/rus/home.html",
+      "value": 1,
+      "target": "http://dri.cornell.edu"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/icap.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/summers/summers.html"
+    },
+    {
+      "source": "http://cs.cornell.edu/info/courses/current/cs415/cs414.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/diyu/y.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/diyu/y.html",
+      "value": 1,
+      "target": "http://cs.cornell.edu/info/courses/spring-96/cs432/cs432.html"
+    },
+    {
+      "source": "http://cs.cornell.edu/info/courses/fall-95/cs415/cs415.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/indira/homepage.html"
+    },
+    {
+      "source": "http://cs.cornell.edu/info/courses/fall-95/cs415/cs415.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/seena/homepage.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/indira/homepage.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/indira/homepage.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs418"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/seena/homepage.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs514/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/seena/homepage.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/seena/homepage.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs418"
+    },
+    {
+      "source": "http://cs.cornell.edu/info/courses/spring-96/cs432/cs432.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/lucy/lucy.html"
+    },
+    {
+      "source": "http://cs.cornell.edu/info/courses/spring-96/cs432/cs432.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/singhal/singhal.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/singhal/singhal.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/department/annual94/faculty/salton.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/courses/current/cs401",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/imalik/indira.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/imalik/indira.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/imalik/indira.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs631/welcome.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/imalik/indira.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/gbd/gbd.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/courses/spring-96/cs515",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/joseluis/joseluis.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/courses/spring-96/cs515",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jrdiazh/jrdiazh.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/joseluis/joseluis.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/joseluis/joseluis.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/amith/yam.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/people/vogels",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kguo/home.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/people/vogels",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/mhuang/stanley.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/people/vogels",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/faculty/brian_smith.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/people/vogels",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rvr/rvr.html"
+    },
+    {
+      "source": "http://simon.cs.cornell.edu/info/people/vogels",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/tve/tve.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kguo/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rvr/rvr.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/mhuang/stanley.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rvr/rvr.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/mhuang/stanley.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/u-net"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/faculty/brian_smith.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-95/cs314/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/faculty/brian_smith.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ankit/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/faculty/brian_smith.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ioi/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/faculty/brian_smith.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/sugata/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/rvr/rvr.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/karr/karr.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/rvr/rvr.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/takako/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/rvr/rvr.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/horus/arpa/arpa.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-94/cs617"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs314"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/barber/welcome.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/grzes/grzes.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/cam"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/split-c"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tve/tve.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/u-net"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs472/cs472.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ckliau/ckliau.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/fall-95/cs472/cs472.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/yuichi/yuichi.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/spring-96/cs211/cs211.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs410/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/spring-96/cs674/cs674.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/cardie/cardie.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/summer-96/cs99/cs99.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/barber/welcome.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/department/annual95/faculty/pingali.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/prakas/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ahuja/ahuja.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/amith/yam.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ahuja/ahuja.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/gbd/gbd.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/avinash/avinash.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/avinash/avinash.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/amith/yam.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/barber/welcome.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs314"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/barber/welcome.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/sugata/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/barber/welcome.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/u-net"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ckliau/ckliau.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs401/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ckliau/ckliau.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/grzes/grzes.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/cam"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/grzes/grzes.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/sp-2"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/grzes/grzes.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/split-c"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/grzes/grzes.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/u-net"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/huang/huang.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rdz/rdz.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ioi/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ioi/home.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jgm/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs611/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jgm/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs512/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jmiller/jmiller.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rdz/rdz.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jmiller/jmiller.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/csrvl/csrvl.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jshapiro/jshapiro.htm",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jshapiro/jshapiro.htm",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs516"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jshapiro/jshapiro.htm",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs664/cs664.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jyh/jyh.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/faculty/rc/rc.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jyh/jyh.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/nuprl/nuprl.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/karl/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/csrvl/csrvl.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kartikhk/homepg.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kartikhk/homepg.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs514/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kartikhk/homepg.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kartikhk/homepg.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs418"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kota/kota.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kota/kota.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kozen/kozen.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs212/cs212.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/kozen/kozen.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/fms/fms.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ldzhou/index.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs631/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/nikosc/nikosc.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/nikosc/projects/prema/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/prakas/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/prakas/cs414/cs414.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/prakas/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/vladimir/vladimir.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/prakas/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/stodghil/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/praveen/praveen.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/praveen/praveen.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/praveen/projects/seq.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ravi/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ergun/ergun.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ravi/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ronitt/homepage.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ronitt/homepage.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ergun/ergun.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/scl/sean.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/scl/sean.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs664/cs664.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/scl/sean.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/scl/sean.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs418"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/stodghil/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/vladimir/vladimir.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/sugata/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/zeno/zeno.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tah/tah.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/tah/cs611.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/tah/tah.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/tah/hytech.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/weichen/weichen.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/sam/sam.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/wwlee/wwlee.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/wwlee/wwlee.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs516"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/wwlee/wwlee.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/hejik/hejik.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/xichun/xichun.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/yanhong/index-postdoc.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/yanhong/cachet.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs280/cs280.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/sam/sam.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs401/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ashish/ashish.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs401/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/bhardwaj/bhardwaj.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs401/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/gbd/gbd.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs401/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/yuichi/yuichi.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ashish/ashish.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ashish/ashish.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs631/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/ashish/ashish.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/gbd/gbd.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/bhardwaj/bhardwaj.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/bhardwaj/bhardwaj.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs631/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/bhardwaj/bhardwaj.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/gbd/gbd.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/gbd/gbd.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs537/course.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/gbd/gbd.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs631/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/gbd/gbd.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/ankit/index.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/yuichi/yuichi.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs415/cs414.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/yuichi/yuichi.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs664/cs664.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs415/cs414.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/lxwu/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/lxwu/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs631/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs611/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/fms/fms.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/current/cs611/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/lili/ll.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/fms/fms.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs631/home.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/lili/ll.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/current/cs681/cs681.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jmm/jmm.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/samuel"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/fall-95/cs501/cs401-501.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/suzuki/suzuki.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/jmm/jmm.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs516"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/samuel",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/courses/spring-96/cs100/cs100.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/suzuki/suzuki.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/suzuki/suzuki.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs418"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/spring-96/cs516",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/sp-2"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/sp-2",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/cam"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/sp-2",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/split-c"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/spring-96/cs664/cs664.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/dph/dph.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/courses/spring-96/cs664/cs664.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/rdz/rdz.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/rdz/rdz.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/kettnake/kettnake.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/amith/yam.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs417"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/amith/yam.html",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs418"
+    },
+    {
+      "source": "http://www.tc.cornell.edu/visualization/education/cs417",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/icchen/icchen.html"
+    },
+    {
+      "source": "http://www.tc.cornell.edu/visualization/education/cs417",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/~bruce"
+    },
+    {
+      "source": "http://www.tc.cornell.edu/visualization/education/cs417",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/visualization/education/cs418"
+    },
+    {
+      "source": "http://www.tc.cornell.edu/visualization/education/cs418",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/~bruce"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/u-net",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/cam"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/chichao/chichao.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/cam"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/chichao/chichao.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/split-c"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/cam",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/split-c"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/nuprl/nuprl.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/hayden/hayden.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/nuprl/nuprl.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/people/jackson/jackson.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/nuprl/nuprl.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/nuprl/cs611/cs611.html"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/people/janosi/home.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/zeno/zeno.html"
+    },
+    {
+      "source": "http://www.tc.cornell.edu/~anne",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/~anne"
+    },
+    {
+      "source": "http://www.cs.cornell.edu/info/projects/horus/arpa/arpa.html",
+      "value": 1,
+      "target": "http://www.cs.cornell.edu/info/projects/medianet"
+    },
+    {
+      "source": "http://www.tc.cornell.edu/~bruce",
+      "value": 1,
+      "target": "http://www.tc.cornell.edu/~bruce"
+    }
+  ],
+  "params": {
+    "paused": false,
+    "fdlTimestep": 0.550000011920929,
+    "fdlEdgeScale": 0.10000000149011612,
+    "fpfSpringLength": 1,
+    "fdlCoulombConstant": 50,
+    "fdlPointScale": 3,
+    "fdlSpringConstant": 1,
+    "clusterSpringLength": 200,
+    "fdlScale": 0.11905919015407562,
+    "unweighted": false,
+    "fdlCurCenX": 474.1241455078125,
+    "fdlCurCenY": 388.917724609375,
+    "fpfSpringForce": 20,
+    "fpfCoulombConstant": 10000,
+    "fdlRestingLength": 5,
+    "colormap": 0,
+    "unweightedEgoHops": 1
+  },
+  "barcode": {
+    "scrollBX": 7,
+    "status": [
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "normal",
+      "REPEL",
+      "normal",
+      "normal",
+      "normal",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL",
+      "REPEL"
+    ]
+  }
+}
