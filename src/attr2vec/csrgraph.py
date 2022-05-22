@@ -1,10 +1,8 @@
 import gc
 import networkx as nx
-import numba
-from numba import jit, jitclass
 import numpy as np
 import os
-import pandas as pd
+import numba
 from scipy import sparse
 import time
 import warnings

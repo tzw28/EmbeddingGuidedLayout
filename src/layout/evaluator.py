@@ -1,7 +1,7 @@
+from matplotlib.pyplot import contour
 from src.util.graph_reading import largest_connected_subgraph
 import numpy as np
 import json
-from numba import jit, jitclass
 import math
 from scipy.spatial.distance import cdist
 from scipy.spatial import ConvexHull
@@ -35,11 +35,13 @@ class Vector(object):
 
 class LayoutEvaluator(object):
 
-    def __init__(self, G, pos_dict, class_map):
+    def __init__(self, graph_name, G, pos_dict, class_map, limit_to=None):
+        self.graph_name = graph_name
         self.G = G
         self.pos_dict = pos_dict
         self.class_map = class_map
         self.dis_map = {}
+        self.limit_to = limit_to
 
     def _normalize_position(self, pos, x_range=(0, 1), y_range=(0, 1)):
         nm_pos = {}
@@ -119,16 +121,22 @@ class LayoutEvaluator(object):
             res += 1 / l**2
         return res
 
-    def _compute_edge_crossings(self, pos):
+    def _compute_edge_crossings(self, pos, outside=False):
+        if outside and not self.class_map:
+            return -1
         crossing_count = 0
         edge_num = len(self.G.edges)
         total_degree = 0
         for node in self.G.nodes:
             degree = self.G.degree(node)
             total_degree += degree
-        print(edge_num)
+        # print(edge_num)
         for s1, t1 in self.G.edges:
+            if outside and self.class_map[s1] == self.class_map[t1]:
+                continue
             for s2, t2 in self.G.edges:
+                if outside and self.class_map[s2] == self.class_map[t2]:
+                    continue
                 if s1 == t2 or s1 == s2 or s2 == t1 or \
                    t1 == s2 or t1 == t2 or t2 == s1:
                     # print("skip {}-{} {}-{}".format(s1, t1, s2, t2))
@@ -138,10 +146,14 @@ class LayoutEvaluator(object):
                 if self._is_intersected(ps1, pt1, ps2, pt2):
                     # print("cross {}-{} {}-{}".format(s1, t1, s2, t2))
                     crossing_count += 1
-        print("crossings {}".format(crossing_count))
-        return crossing_count / 2 / edge_num ** 2
+        # if not outside:
+            # print("crossings {}".format(crossing_count))
+        # return crossing_count / 2 / edge_num ** 2
+        return crossing_count / edge_num ** 2
 
     def _compute_community_significance(self, pos):
+        if not self.class_map:
+            return -1
         inner_dis = []
         outer_dis = []
         for node1 in self.G.nodes:
@@ -161,7 +173,7 @@ class LayoutEvaluator(object):
 
     def _distance_matrix(self, pos):
         if self.dis_map:
-            print("distance map exists.")
+            # print("distance map exists.")
             return
         dis_map = {}
         # distance matrix
@@ -174,13 +186,41 @@ class LayoutEvaluator(object):
                 dis_map[node1] = {}
             for node2 in self.G.nodes:
                 if node1 == node2:
-                    dis = 9999
+                    dis = 0
                 else:
                     index1 = node_key_list.index(node1)
                     index2 = node_key_list.index(node2)
                     dis = distance_matrix[index1][index2]
                 dis_map[node1][node2] = dis
         self.dis_map = dis_map
+
+    def _compute_normalized_distance_matrix(self):
+        if not self.dis_map:
+            print("No distance map.")
+            return None
+        min_dis = 99999
+        max_dis = 0
+        for node1 in self.dis_map.keys():
+            for node2 in self.dis_map.keys():
+                if node1 == node2:
+                    continue
+                dis = self.dis_map[node1][node2]
+                if dis > max_dis:
+                    max_dis = dis
+                if dis < min_dis:
+                    min_dis = dis
+        
+        nml_dis_map = {}
+        for node1 in self.dis_map.keys():
+            nml_dis_map[node1] = {}
+            for node2 in self.dis_map.keys():
+                if node1 == node2:
+                    nml_dis_map[node1][node2] = 0
+                    continue
+                dis = self.dis_map[node1][node2]
+                nml_dis_map[node1][node2] = (dis - min_dis) / (max_dis - min_dis)
+        return nml_dis_map
+
 
     def _compute_neighborhood_preservation(self, pos, k=2):
         dis_map = {}
@@ -213,7 +253,7 @@ class LayoutEvaluator(object):
         for node in self.G.nodes:
             degree = self.G.degree(node)
             total_degree += degree
-        print(edge_num)
+        # print(edge_num)
         exmained_edge_pair = {}
         edge_list = list(self.G.edges)
         for i in range(0, len(edge_list)):
@@ -239,7 +279,7 @@ class LayoutEvaluator(object):
         #         if self._is_intersected(ps1, pt1, ps2, pt2):
         #             # print("cross {}-{} {}-{}".format(s1, t1, s2, t2))
         #             crossing_count += 1
-        print("crossings {}".format(crossing_count))
+        # print("crossings {}".format(crossing_count))
         if cmax > 0:
             cln = 1 - math.sqrt(crossing_count / cmax)
         else:
@@ -278,7 +318,7 @@ class LayoutEvaluator(object):
 
     def _compute_node_spread(self, pos):
         if not self.class_map:
-            return 0
+            return -1
         centers = {}
         for node in self.G.nodes:
             clas = self.class_map[node]
@@ -303,7 +343,7 @@ class LayoutEvaluator(object):
             avg_dis = centers[clas][3] / centers[clas][2]
             res += avg_dis
         res /= len(centers.keys())
-        return 1 - res * 2
+        return res
 
     def _distance_to_hull(self, target, convex_hull):
         l = convex_hull.shape[0]
@@ -331,6 +371,8 @@ class LayoutEvaluator(object):
         return path.contains_point(p)
 
     def _compute_group_overlap(self, pos):
+        if not self.class_map:
+            return -1
         group_nodes = {}
         group_hulls = {}
         for node in self.G.nodes:
@@ -365,38 +407,142 @@ class LayoutEvaluator(object):
                 if self._in_convexhull(p, path):
                     hull_count += 1
             res += hull_count / node_number
-        return 1 - res / group_number
+        return res / group_number
+
+    def _compute_global_entropy(self, pos, unit_width=0.2):
+        if not self.class_map:
+            return -1
+        class_count = 0
+        temp = []
+        for node, clas in self.class_map.items():
+            if clas in temp:
+                continue
+            temp.append(clas)
+            class_count += 1
+        unit_class_dict = {}
+        miss_count = 0
+        for node, p in pos.items():
+            if node not in self.class_map.keys():
+                miss_count += 1
+                continue
+            clas = self.class_map[node]
+            index_x = int(p[0] / unit_width)
+            index_y = int(p[1] / unit_width)
+            unit = (index_x, index_y)
+            if unit not in unit_class_dict.keys():
+                unit_class_dict[unit] = [clas]
+            else:
+                unit_class_dict[unit].append(clas)
+        if miss_count > 0:
+            print("missed {}".format(miss_count))
+        res = 0
+        unit_count = 0
+        entropy = {}
+        for unit, classes in unit_class_dict.items():
+            class_dict = {}
+            count = 0
+            ent = 0
+            for clas in classes:
+                count += 1
+                if clas not in class_dict.keys():
+                    class_dict[clas] = 1
+                else:
+                    class_dict[clas] += 1
+            for clas, clas_count in class_dict.items():
+                class_percentage = clas_count / count
+                ent += -1 * class_percentage * math.log2(class_percentage)
+            # ent /= class_count # 归一化？好像不太可能
+            entropy[unit] = ent
+            unit_count += 1
+            res += ent
+        res /= unit_count
+        return res
+    
+    def _compute_autocorrelation(self, pos, radius=0.1):
+        if not self.class_map:
+            return -1
+        normalized_dis_map = self._compute_normalized_distance_matrix()
+        res = 0
+        node_count = 0
+        for nodei in pos.keys():
+            if nodei not in normalized_dis_map.keys():
+                continue
+            node_count += 1
+            count = 0
+            A = 0
+            B = 0
+            for nodej in pos.keys():
+                if nodei == nodej or nodej not in normalized_dis_map.keys():
+                    continue
+                dis = normalized_dis_map[nodei][nodej]
+                if dis > radius:
+                    continue
+                count += 1
+                B += 1 - dis
+                if self.class_map[nodei] != self.class_map[nodej]:
+                    A += 1 - dis
+            if B == 0:
+                continue
+            Ci = A / B
+            res += Ci
+        res /= node_count
+        return res
+    
+    def _compute_node_occlusions(self, pos, threshold=0.01):
+        count = 0
+        node_count = 0
+        for node1 in pos.keys():
+            if node1 not in self.dis_map.keys():
+                continue
+            node_count += 1
+            for node2 in pos.keys():
+                if node1 == node2 or node2 not in self.dis_map.keys():
+                    continue
+                dis = self.dis_map[node1][node2]
+                if dis < threshold:
+                    count += 1
+        res = count / 2 / node_count ** 2
+        return res
 
     def run(self):
         print("开始布局效果评估计算")
         self.res_dict = {}
         for key in self.pos_dict.keys():
+            if self.limit_to and key not in self.limit_to:
+                continue
+            print(key)
             G = self.G
             if key == "PH":
                 self.G = largest_connected_subgraph(G)
             pos = self._normalize_position(self.pos_dict[key])
             self.dis_map = {}
+            self._distance_matrix(pos)
             # inner_avg_distance, outer_avg_distance = self._compute_community_significance(pos)
             self.res_dict[key] = {
                 # "edge_length_uniformity": self._compute_edge_length_uniformity(pos),
                 # "node_distribution": self._compute_node_distribution(pos),
                 # "edge_crossings": self._compute_edge_crossings(pos),
-                # "inner_avg_distance": inner_avg_distance,
-                # "outer_avg_distance": outer_avg_distance
                 # "np-1": self._compute_neighborhood_preservation(pos, k=1),
                 # "np-2": self._compute_neighborhood_preservation(pos, k=2),
-                "ns": self._compute_node_spread(pos),
-                "go": self._compute_group_overlap(pos),
-                "np-3": self._compute_neighborhood_preservation(pos, k=3),
-                "np-4": self._compute_neighborhood_preservation(pos, k=4),
-                "np-5": self._compute_neighborhood_preservation(pos, k=5),
-                "cln": self._compute_crosslessness(pos),
-                "ma": self._compute_minimum_angle(pos),
+                # "np-3": self._compute_neighborhood_preservation(pos, k=3),
+                # "np-4": self._compute_neighborhood_preservation(pos, k=4),
+                # "np-5": self._compute_neighborhood_preservation(pos, k=5),
+                # "cln": self._compute_crosslessness(pos),
+
+                "node_spread": self._compute_node_spread(pos),
+                "node_occlusions": self._compute_node_occlusions(pos),
+                "edge_crossings": self._compute_edge_crossings(pos),
+                "edge_crossings_outside": self._compute_edge_crossings(pos, outside=True),
+                "minimum_angle": self._compute_minimum_angle(pos),
+                "edge_length_variation": self._compute_edge_length_uniformity(pos),
+                "group_overlap": self._compute_group_overlap(pos),
+                "entropy": self._compute_global_entropy(pos),
+                "autocorrelation": self._compute_autocorrelation(pos)
             }
             self.G = G
 
-    def save_json_result(self, save_path, graph_name):
-        file_path = save_path + "/{}_layout_evaluation.json".format(graph_name)
+    def save_json_result(self, save_path):
+        file_path = save_path + "/{}_layout_evaluation.json".format(self.graph_name)
         with open(file_path, "w") as f:
             json.dump(self.res_dict, f)
         print("布局效果评估计算完成")

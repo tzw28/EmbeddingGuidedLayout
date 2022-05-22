@@ -5,7 +5,8 @@ from .graph_reading import (
     read_cora_graph,
     read_citeseer_graph,
     read_science_graph,
-    read_facebook_graph
+    read_facebook_graph,
+    read_facebook_graph_numeric
 )
 import os
 import numpy as np
@@ -22,34 +23,49 @@ readers = {
 }
 
 
-def write_weka_graph(path, filename, weka_graph):
+def write_weka_graph(path, filename, weka_graph, node_class=None):
     if not os.path.exists(path):
         os.mkdir(path)
     node_dict = weka_graph["nodes"]
     attr_dict = weka_graph["attrs"]
     edge_list = weka_graph["edges"]
+    classes = []
+    if node_class != None:
+        for node, clas in node_class.items():
+            if clas not in classes:
+                classes.append(clas)
     # arff file, containing node and attribute infomation
     node_file_path = path + "/" + filename + "_nodes.arff"
     with open(node_file_path, "w") as f:
         lines = []
         lines.append("@relation {}\n".format(filename.replace(" ", "_")))
+        lines.append("@attribute NodeId string\n")
+        if node_class:
+            lines.append("@attribute class {" + ','.join(classes) + "}\n")
+        else:
+            lines.append("@attribute class {A}\n")
         for attr_key, attr_type in attr_dict.items():
             if attr_key == "group":
                 enum_body = "{" + ",".join([str(i) for i in range(15)]) + "}"
                 lines.append("@attribute {} {}\n".format(attr_key, enum_body))
             else:
                 lines.append("@attribute {} {}\n".format(attr_key, attr_type))
-        lines.append("@attribute class {p}\n")
-        lines.append("@attribute NodeId string\n")
+        # lines.append("@attribute class {p}\n")
         lines.append("@data\n")
         for node, attrs in node_dict.items():
             line = ""
+            line += "{},".format(node)
+            if node_class != None:
+                line += node_class[node] + ","
+            else:
+                line += "A,"
             for attr_key in attr_dict.keys():
                 if attr_key in attrs.keys():
                     line += str(attrs[attr_key]) + ","
                 else:
                     line += "0,"
-            line += "p,{}\n".format(node)
+            line = line[:-1]
+            line += "\n"
             lines.append(line)
         f.writelines(lines)
     # csv file, containing node and attribute infomation
@@ -94,6 +110,7 @@ def nx_to_weka(G: nx.Graph):
                 attr_dict[attr_key] = "real"
     for s, t in G.edges:
         edge_list.append((s, t))
+    
     return dict(nodes=node_dict, edges=edge_list, attrs=attr_dict)
 
 
@@ -187,14 +204,24 @@ def write_edge_list(path, filename, node_dict, edge_list):
 
 def all_to_weka():
     path = "data/weka"
+
+    readers = {
+        "cora": read_cora_graph,
+        "citeseer": read_citeseer_graph,
+        "miserables": read_miserables_graph,
+        "science": read_science_graph,
+        "facebook": read_facebook_graph_numeric,
+        "cornell": read_cornell_graph
+    }
+
     for graph_name, reader in readers.items():
-        if graph_name in ["cora", "citeseer"]:
-            G = reader(True)[0]
+        if graph_name in ["facebook", "cora", "citeseer", "cornell"]:
+            G, node_class = reader()
         else:
             continue
             G = reader()[0]
         weka_graph = nx_to_weka(G)
-        write_weka_graph(path, graph_name, weka_graph)
+        write_weka_graph(path, graph_name, weka_graph, node_class)
 
 
 def all_to_edge_list():
@@ -203,3 +230,4 @@ def all_to_edge_list():
         G = reader()[0]
         node_dict, edge_list = nx_to_edge_list(G)
         write_edge_list(path, graph_name, node_dict, edge_list)
+

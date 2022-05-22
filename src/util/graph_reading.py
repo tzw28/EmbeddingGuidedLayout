@@ -45,7 +45,7 @@ def read_ph_result(graph_name):
     return pos
 
 
-def read_drgraph_resulk(graph_name):
+def read_drgraph_result(graph_name):
     nodemap_path = "data/drgraph/{}_nodemap.txt".format(graph_name)
     pos_path = "data/drgraph/{}.txt".format(graph_name)
     node_map = {}
@@ -98,6 +98,19 @@ def read_graphtsne_result(graph_name):
                 index += 1
         return pos
 
+def read_graphtpp_result(graph_name):
+    view_file_path = "data/graphtpp/{}.view".format(graph_name)
+    pos = {}
+    lines = []
+    with open(view_file_path, "r") as f:
+        lines = f.readlines()
+    for line in lines:
+        strs = line.split(",")
+        node = strs[0]
+        pos_x = float(strs[2])
+        pos_y = float(strs[3])
+        pos[node] = (pos_x, pos_y)
+    return pos
 
 def read_influence_graph():
     node_file = "data/influence/painters_attributes.arff"
@@ -587,6 +600,50 @@ def read_facebook_graph():
         len(list(G.edges))
     ))
     return G, None
+
+def read_facebook_graph_numeric():
+    feature_name_file = "data/facebook/0.featnames"
+    node_feature_file = "data/facebook/0.feat"
+    edge_file = "data/facebook/0.edges"
+
+    feature_list = []
+    with open(feature_name_file, 'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            strs = line.split(" ")
+            feature_content = strs[-1].strip()
+            feature_name = "_".join(strs[1].split(";")[:-1])
+            feature = (feature_name, "f" + feature_content)
+            feature_list.append(feature)
+    # print(feature_list)
+    G = nx.Graph()
+    with open(node_feature_file, 'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            strs = line.split(" ")
+            node_id = strs[0]
+            G.add_node(node_id)
+            for i, f in enumerate(strs[1:]):
+                if int(f) == 0:
+                    continue
+                feature = feature_list[i]
+                G.nodes[node_id][feature[0]+"_"+feature[1]] = 1
+    with open(edge_file, 'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            strs = line.split(" ")
+            s = strs[0]
+            t = strs[1].strip()
+            G.add_edge(s, t)
+    # 保留最大连通子图
+    # G = largest_connected_subsubgraph(G)
+    print("Read {}, {} nodes, {} edges.".format(
+        "Facebook",
+        len(list(G.nodes)),
+        len(list(G.edges))
+    ))
+    return G, None
+
 
 
 def read_nature150_graph():

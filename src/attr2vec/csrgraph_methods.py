@@ -3,7 +3,7 @@ Fast JIT'ed graph methods.
 These are outside the CSRGraph class so methods can call them
 """
 import numba
-from numba import jit, jitclass
+from numba import jit
 import numpy as np
 import os
 from scipy import sparse

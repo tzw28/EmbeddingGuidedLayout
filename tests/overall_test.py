@@ -1,3 +1,4 @@
+from math import fabs
 from src.util.graph_reading import (
     init_attributed_graph,
     clean_attributed_graph,
@@ -6,8 +7,9 @@ from src.util.graph_reading import (
     read_cora_graph,
     read_citeseer_graph,
     read_cornell_graph,
-    read_drgraph_resulk,
+    read_drgraph_result,
     read_graphtsne_result,
+    read_graphtpp_result,
     read_ppi_graph,
     read_ppt_graph,
     read_miserables_graph,
@@ -30,7 +32,7 @@ from src.util.cluster import kmeans
 from src.layout.embedding_fr import _normalize_positions, embedding_fr
 from src.layout.evaluator import LayoutEvaluator
 from src.layout.reduction import tsne
-from src.attr2vec.embedding import attributed_embedding
+from src.attr2vec.embedding import attributed_embedding, node2vec_embedding, node2vec_embedding_standard
 from src.util.plot_drawing import draw_embedding_fr
 from src.util.key_words import graph_tf_idf
 from src.aggregation.graph_aggregation import (
@@ -38,7 +40,9 @@ from src.aggregation.graph_aggregation import (
     GraphAggregator
 )
 import networkx as nx
-import matplotlib.pyplot as plt
+# import matplotlib
+# matplotlib.use('TKAgg')
+from matplotlib import pyplot as plt
 import time
 import os
 import json
@@ -147,11 +151,14 @@ def overall_tests(
 
     # DRGraph
     if True:
-        drgraph_pos = read_drgraph_resulk(graph_name)
+        drgraph_pos = read_drgraph_result(graph_name)
     # GraphTSNE
     if graph_name in ["cora", "citeseer", "cornell"]:
         graphtsne_pos = read_graphtsne_result(graph_name)
         # _normalize_positions(graphtsne_pos)
+    # GraphTPP
+    if graph_name in ["cora", "citeseer", "cornell", "facebook"]:
+        graphtpp_pos = read_graphtpp_result(graph_name)
 
     # Embedding和聚类、分配颜色
     color_list = []
@@ -178,30 +185,30 @@ def overall_tests(
             graph_name=graph_name,
             get_weights=True)
         clean_attributed_graph(G, vectors)
-        local_vectors, _ = attributed_embedding(
-            G,
-            d=d,
-            walklen=walklen,
-            return_weight=1,
-            neighbor_weight=10,
-            attribute_weight=1,
-            epochs=epochs,
-            seed=seed,
-            virtual_nodes=[],
-            graph_name=graph_name,
-            get_weights=False)
-        global_vectors, _ = attributed_embedding(
-            G,
-            d=d,
-            walklen=walklen,
-            return_weight=10,
-            neighbor_weight=1,
-            attribute_weight=1,
-            epochs=epochs,
-            seed=seed,
-            virtual_nodes=[],
-            graph_name=graph_name,
-            get_weights=False)
+        # local_vectors, _ = attributed_embedding(
+        #     G,
+        #     d=d,
+        #     walklen=walklen,
+        #     return_weight=1,
+        #     neighbor_weight=10,
+        #     attribute_weight=1,
+        #     epochs=epochs,
+        #     seed=seed,
+        #     virtual_nodes=[],
+        #     graph_name=graph_name,
+        #     get_weights=False)
+        # global_vectors, _ = attributed_embedding(
+        #     G,
+        #     d=d,
+        #     walklen=walklen,
+        #     return_weight=10,
+        #     neighbor_weight=1,
+        #     attribute_weight=1,
+        #     epochs=epochs,
+        #     seed=seed,
+        #     virtual_nodes=[],
+        #     graph_name=graph_name,
+        #     get_weights=False)
         end = time.time()
         embedding_t = end - start
         color_list = []
@@ -232,7 +239,6 @@ def overall_tests(
     ax.spines["bottom"].set_visible(False)
     ax.spines["left"].set_visible(False)
 
-    # DRGraph
     if graph_name in ["facebook", "facebook_lcg", "influence", "influence_lcg"]:
         real_color_list = color_list
     else:
@@ -241,7 +247,9 @@ def overall_tests(
             c = node_class[node]
             c_num = class_map[c]
             real_color_list.append(COLOR_MAP[c_num])
+
     pos_dict = {}
+    # DRGraph
     if True:
         pos_dict["drgraph"] = drgraph_pos
         nx.draw_networkx_nodes(G, drgraph_pos, node_size=node_size,
@@ -253,6 +261,18 @@ def overall_tests(
             save_path + "/{}-drgraph.png".format(graph_name.replace("/", "_").replace(".", "_")))
         plt.cla()
 
+    # GraphTPP
+    if graph_name in ["cora", "citeseer", "cornell", "facebook"]:
+        pos_dict["graphtpp"] = graphtpp_pos
+        nx.draw_networkx_nodes(G, graphtpp_pos, node_size=node_size,
+                               node_color=real_color_list, edgecolors='white', linewidths=0.7)
+        # nx.draw_networkx_labels(G, em_fr_pos)
+        nx.draw_networkx_edges(
+            G, graphtpp_pos, width=edge_width, alpha=0.1)
+        plt.savefig(
+            save_path + "/{}-graphtpp_pos.png".format(graph_name.replace("/", "_").replace(".", "_")))
+        plt.cla()
+    
     # GraphTSNE
     if graph_name in ["cora", "citeseer", "cornell"]:
         pos_dict["graphtsne"] = graphtsne_pos
@@ -265,10 +285,6 @@ def overall_tests(
             save_path + "/{}-graphtsne.png".format(graph_name.replace("/", "_").replace(".", "_")))
         plt.cla()
     plt.close()
-    if False:
-        ev = LayoutEvaluator(G, pos_dict, cluster)
-        ev.run()
-        ev.save_json_result(save_path, graph_name)
 
     weights = graph_tf_idf(
         G, cluster, walks,
@@ -300,6 +316,11 @@ def overall_tests(
     start = time.time()
     em_fr_cte_pos = embedding_fr(
         G, vectors=vectors, te=te, wa=wa, we=we, cluster=cluster, tel=tel, teh=teh)
+    end = time.time()
+    # EM+FR(不均截断,class)
+    start = time.time()
+    em_fr_cte_class_pos = embedding_fr(
+        G, vectors=vectors, te=te, wa=wa, we=we, cluster=node_class, tel=tel, teh=teh)
     end = time.time()
     em_fr_cte_t = round(end - start, 3)
     extra_pos = {}
@@ -336,6 +357,7 @@ def overall_tests(
     # save_path = make_figure_path(graph_name, note)
     pos_dict["FR"] = fr_pos
     pos_dict["EGL"] = em_fr_cte_pos
+    pos_dict["EGL(class)"] = em_fr_cte_class_pos
     if ph_pos:
         pos_dict["PH"] = ph_pos
     # pos_dict = {
@@ -419,8 +441,150 @@ def overall_tests(
         plt.savefig(save_path + "/{}-PH-{}s.png".format(
             graph_name.replace("/", "_").replace(".", "_"), em_fr_t))
         plt.cla()
+    
+        # node2vec
+        # if graph_name in ["facebook"]:
+        if False:
+            n2v_vectors, _ = node2vec_embedding(
+                LCG,
+                d=d,
+                walklen=walklen,
+                return_weight=return_weight,
+                neighbor_weight=neighbor_weight,
+                epochs=epochs,
+                seed=seed,
+                graph_name=graph_name)
+            n2v_cluster = kmeans(n2v_vectors, K=k)
+            n2v_color_list = []
+            for node in LCG.nodes:
+                n2v_color_list.append(COLOR_MAP[n2v_cluster[node]])
+            # EM+FR(不均截断)
+            start = time.time()
+            n2v_fr_cte_pos = embedding_fr(
+                LCG, vectors=n2v_vectors, te=te, wa=wa, we=we, cluster=n2v_cluster, tel=tel, teh=teh)
+            end = time.time()
+            n2v_fr_cte_t = round(end - start, 3)
+            pos_dict["EGL(node2vec)"] = n2v_fr_cte_pos
+            if class_map and count:
+                # node2vec + FR
+                nx.draw_networkx_nodes(LCG, n2v_fr_cte_pos, node_size=lcg_node_size,
+                                    node_color=lcg_color_list, edgecolors='white', linewidths=0.7)
+                nx.draw_networkx_edges(
+                    LCG, n2v_fr_cte_pos, width=edge_width, alpha=edge_alpha)
+                plt.savefig(save_path + "/{}-N2V-FR-CTE-RealColor-{}s.png".format(
+                    graph_name.replace("/", "_").replace(".", "_"), n2v_fr_cte_t))
+                plt.cla()
+            # node2vec + FR
+            nx.draw_networkx_nodes(LCG, n2v_fr_cte_pos, node_size=lcg_node_size,
+                                    node_color=n2v_color_list, edgecolors='white', linewidths=0.7)
+            nx.draw_networkx_edges(
+                LCG, n2v_fr_cte_pos, width=edge_width, alpha=edge_alpha)
+            plt.savefig(save_path + "/{}-N2V-FR-CTE-{}s.png".format(
+                graph_name.replace("/", "_").replace(".", "_"), n2v_fr_cte_t))
+            plt.cla()
+        if False:
+            # node2vec
+            n2v_vectors, _ = node2vec_embedding(
+                G,
+                d=d,
+                walklen=walklen,
+                return_weight=return_weight,
+                neighbor_weight=neighbor_weight,
+                epochs=epochs,
+                seed=seed,
+                graph_name=graph_name,
+            )
+            # n2v_vectors, _ = attributed_embedding(
+            #     G,
+            #     d=d,
+            #     walklen=walklen,
+            #     return_weight=return_weight,
+            #     neighbor_weight=neighbor_weight,
+            #     epochs=epochs,
+            #     seed=seed,
+            #     virtual_nodes=[],
+            #     graph_name=graph_name,
+            #     get_weights=True)
+            n2v_cluster = kmeans(n2v_vectors, K=k)
+            n2v_color_list = []
+            for node in G.nodes:
+                n2v_color_list.append(COLOR_MAP[n2v_cluster[node]])
+            # EM+FR(不均截断)
+            start = time.time()
+            n2v_fr_cte_pos = embedding_fr(
+                G, vectors=n2v_vectors, te=te, wa=wa, we=we, cluster=n2v_cluster, tel=tel, teh=teh)
+            end = time.time()
+            n2v_fr_cte_t = round(end - start, 3)
+            pos_dict["EGL(node2vec)"] = n2v_fr_cte_pos
+            # EM+FR(不均截断,class)
+            start = time.time()
+            n2v_fr_cte_class_pos = embedding_fr(
+                G, vectors=n2v_vectors, te=te, wa=wa, we=we, cluster=node_class, tel=tel, teh=teh)
+            end = time.time()
+            n2v_fr_cte_t = round(end - start, 3)
+            pos_dict["EGL(node2vec,class)"] = n2v_fr_cte_class_pos
+            if class_map and count:
+                # node2vec + FR
+                nx.draw_networkx_nodes(G, n2v_fr_cte_pos, node_size=node_size,
+                                    node_color=real_color_list, edgecolors='white', linewidths=0.7)
+                nx.draw_networkx_edges(
+                    G, n2v_fr_cte_pos, width=edge_width, alpha=edge_alpha)
+                plt.savefig(save_path + "/{}-N2V-FR-CTE-RealColor-{}s.png".format(
+                    graph_name.replace("/", "_").replace(".", "_"), n2v_fr_cte_t))
+                plt.cla()
+                # node2vec + FR + class
+                nx.draw_networkx_nodes(G, n2v_fr_cte_class_pos, node_size=node_size,
+                                    node_color=real_color_list, edgecolors='white', linewidths=0.7)
+                nx.draw_networkx_edges(
+                    G, n2v_fr_cte_class_pos, width=edge_width, alpha=edge_alpha)
+                plt.savefig(save_path + "/{}-N2V-FR-CTE-RealColor-Class-{}s.png".format(
+                    graph_name.replace("/", "_").replace(".", "_"), n2v_fr_cte_t))
+                plt.cla()
+            # node2vec + FR
+            nx.draw_networkx_nodes(G, n2v_fr_cte_pos, node_size=node_size,
+                                    node_color=n2v_color_list, edgecolors='white', linewidths=0.7)
+            nx.draw_networkx_edges(
+                G, n2v_fr_cte_pos, width=edge_width, alpha=edge_alpha)
+            plt.savefig(save_path + "/{}-N2V-FR-CTE-{}s.png".format(
+                graph_name.replace("/", "_").replace(".", "_"), n2v_fr_cte_t))
+            plt.cla()
+            # node2vec + FR + class
+            nx.draw_networkx_nodes(G, n2v_fr_cte_class_pos, node_size=node_size,
+                                    node_color=n2v_color_list, edgecolors='white', linewidths=0.7)
+            nx.draw_networkx_edges(
+                G, n2v_fr_cte_class_pos, width=edge_width, alpha=edge_alpha)
+            plt.savefig(save_path + "/{}-N2V-FR-CTE-Class-{}s.png".format(
+                graph_name.replace("/", "_").replace(".", "_"), n2v_fr_cte_t))
+            plt.cla()
+
     # EM+FR
     if class_map and count:
+        # labeled_nodes = {}
+        # for node in G.nodes:
+        #     c = node_class[node]
+        #     if c not in labeled_nodes.keys():
+        #         labeled_nodes[c] = {
+        #             "degree": G.degree[node],
+        #             "node": node,
+        #         }
+        #     else:
+        #         if G.degree[node] > labeled_nodes[c]["degree"]:
+        #             labeled_nodes[c]["degree"] = G.degree[node]
+        #             labeled_nodes[c]["node"] = node
+        # labels = {}
+        # for node in G.nodes:
+        #     c = node_class[node]
+        #     if node == labeled_nodes[c]["node"]:
+        #         labels[node] = node
+        #     else:
+        #         labels[node] = ""
+        labels = {}
+        for node in G.nodes:
+            if node in ["Valjean", "Montparnasse", "Cosette", "Marius", "Fantine", "Myriel"]:
+                labels[node] = node
+            else:
+                labels[node] = ""
+
         nx.draw_networkx_nodes(G, fr_pos, node_size=node_size,
                                node_color=real_color_list, edgecolors='white', linewidths=0.7)
         nx.draw_networkx_edges(G, fr_pos, width=edge_width, alpha=edge_alpha)
@@ -434,6 +598,15 @@ def overall_tests(
         plt.savefig(save_path + "/{}-EM-FR-CTE-RealColor-{}s.png".format(
             graph_name.replace("/", "_").replace(".", "_"), em_fr_t))
         plt.cla()
+        nx.draw_networkx_nodes(G, em_fr_cte_class_pos, node_size=node_size,
+                               node_color=real_color_list, edgecolors='white', linewidths=0.7)
+        nx.draw_networkx_edges(
+            G, em_fr_cte_class_pos, width=edge_width, alpha=edge_alpha)
+        nx.draw_networkx_labels(G, em_fr_cte_class_pos, labels=labels)
+        plt.savefig(save_path + "/{}-EM-FR-CTE-RealColor-Class-{}s.png".format(
+            graph_name.replace("/", "_").replace(".", "_"), em_fr_t))
+        plt.cla()
+
 
     fig_title = "{}-d{}-wl{}-ep{}-p{}-q{}-r{}-s{}-wa{}-we{}-te{}-{}".format(
         "EM+FR", d, walklen, epochs, return_weight, neighbor_weight, attribute_weight, seed, wa, we, te, "label" if exist_labels else "cluster")
@@ -445,73 +618,95 @@ def overall_tests(
         G, em_fr_cte_pos, width=edge_width, alpha=edge_alpha)
     plt.savefig(save_path + "/{}-EM-FR-CTE-{}s.png".format(
         graph_name.replace("/", "_").replace(".", "_"), em_fr_cte_t))
+    plt.cla()
+    nx.draw_networkx_nodes(G, em_fr_cte_class_pos, node_size=node_size,
+                           node_color=color_list, edgecolors='white', linewidths=0.7)
+    nx.draw_networkx_edges(
+        G, em_fr_cte_class_pos, width=edge_width, alpha=edge_alpha)
+    plt.savefig(save_path + "/{}-EM-FR-CTE-Class-{}s.png".format(
+        graph_name.replace("/", "_").replace(".", "_"), em_fr_cte_t))
     plt.close()
 
     # EM+FR+AGG
-    # for i in range(1):
-    #     start = time.time()
-    #     fig, ax = init_fig(10, 0.05, frame_visible=False)
-    #     add_group_attr(G, cluster)
-    #     agg = GraphAggregator(
-    #         G,
-    #         em_fr_cte_pos,
-    #         group_attribute="ag_group",
-    #         fig_size=10,
-    #         ax_gap=0.05,
-    #         is_curved=True,
-    #         attr_vectors=vectors,
-    #         local_vectors=local_vectors,
-    #         global_vectors=global_vectors,
-    #         weights=weights
-    #     )
-    #     agg.generate_aggregations()
-    #     agg.draw_aggregations(
-    #         size_min=agg_size_min,
-    #         size_max=agg_size_max,
-    #         width_min=agg_width_min,
-    #         width_max=agg_width_max,
-    #         agg_alpha=agg_alpha,
-    #     )
-    #     agg.set_events(fig)
-    #     end = time.time()
-    #     t = round(end - start, 3)
-    #     if i == 0:
-    #         plt.savefig(save_path + "/{}-EM+FR+AGG-{}s-{}.png".format(graph_name.replace("/", "_").replace(".", "_"), t, i))
-    #     plt.show()
-    #     # agg.select(i, fig)
-    #     # plt.savefig(save_path + "/{}-EM+FR+AGG+Clicked-{}s-{}.png".format(graph_name.replace("/", "_").replace(".", "_"), t, i))
-    #     plt.close()
-    # start = time.time()
-    # fig, ax = init_fig(10, 0.05, frame_visible=False, lim=(0, 1))
-    # draw_embedding_fr(
-    #     graph_file=graph_name,
-    #     default_pos=em_fr_cte_pos,
-    #     attribute_weight=attribute_weight,
-    #     neighbor_weight=neighbor_weight,
-    #     return_weight=return_weight,
-    #     seed=seed,
-    #     color=cluster,
-    #     size_list=node_size,
-    #     width=edge_width,
-    #     edge_alpha=edge_alpha,
-    #     te=te,
-    #     wa=wa,
-    #     we=we,
-    #     teh=teh,
-    #     fig=fig,
-    #     ax=ax,
-    #     ax_gap=0.05,
-    #     fig_size=10,
-    #     click_on=True,
-    # )
-    # end = time.time()
-    # t = round(end - start, 3)
-    # plt.savefig(
-    #     save_path
-    #     + "/{}-EM+FR+Interaction-{}s.png".format(graph_name.replace("/", "_").replace(".", "_"), t)
-    # )
-    # plt.show()
-    # plt.close()
+    if False:
+        if count == 0:
+            count = k
+        for i in range(count):
+            start = time.time()
+            fig, ax = init_fig(10, 0.05, frame_visible=False)
+            if node_class:
+                add_group_attr(G, node_class, class_map)
+                pos = em_fr_cte_class_pos
+            else:
+                add_group_attr(G, cluster, None)
+                pos = em_fr_cte_pos
+            agg = GraphAggregator(
+                G,
+                pos,
+                group_attribute="ag_group",
+                fig_size=10,
+                ax_gap=0.05,
+                is_curved=True,
+                attr_vectors=vectors,
+                local_vectors=None,
+                global_vectors=None,
+                weights=weights
+            )
+            agg.generate_aggregations()
+            agg.draw_aggregations(
+                size_min=agg_size_min,
+                size_max=agg_size_max,
+                width_min=agg_width_min,
+                width_max=agg_width_max,
+                agg_alpha=agg_alpha,
+            )
+            agg.set_events(fig)
+            end = time.time()
+            t = round(end - start, 3)
+            if i == 0:
+                plt.savefig(save_path + "/{}-EM+FR+AGG-{}s.png".format(graph_name.replace("/", "_").replace(".", "_"), t))
+            agg.select(i, fig)
+            plt.savefig(save_path + "/{}-EM+FR+AGG-{}s-{}.png".format(graph_name.replace("/", "_").replace(".", "_"), t, i))
+            plt.cla()
+        # plt.savefig(save_path + "/{}-EM+FR+AGG+Clicked-{}s-{}.png".format(graph_name.replace("/", "_").replace(".", "_"), t, i))
+        # plt.close()
+    if False:
+        start = time.time()
+        fig, ax = init_fig(10, 0.05, frame_visible=False, lim=(0, 1))
+        draw_embedding_fr(
+            graph_file=graph_name,
+            default_pos=em_fr_cte_class_pos,
+            attribute_weight=attribute_weight,
+            neighbor_weight=neighbor_weight,
+            return_weight=return_weight,
+            seed=seed,
+            color=cluster,
+            size_list=node_size,
+            width=edge_width,
+            edge_alpha=edge_alpha,
+            te=te,
+            wa=wa,
+            we=we,
+            teh=teh,
+            fig=fig,
+            ax=ax,
+            ax_gap=0.05,
+            fig_size=10,
+            click_on=True,
+        )
+        end = time.time()
+        t = round(end - start, 3)
+        plt.savefig(
+            save_path
+            + "/{}-EM+FR+Interaction-{}s.png".format(graph_name.replace("/", "_").replace(".", "_"), t)
+        )
+        plt.show()
+        plt.close()
+    if False:
+        # ev = LayoutEvaluator(graph_name, G, pos_dict, cluster)
+        ev = LayoutEvaluator(graph_name, G, pos_dict, node_class, )# limit_to=["EGL", "EGL(node2vec)"])
+        ev.run()
+        ev.save_json_result(save_path)
 
 
 def run_overall_tests():
@@ -532,8 +727,8 @@ def run_overall_tests():
     # 开始测试
     for graph_file in test_graphs.keys():
         # 执行测试
-        # if graph_file not in ["miserables", "facebook", "cornell", "citeseer"]:
-        #     continue
+        if graph_file not in ["miserables"]:
+            continue
         setting = test_graphs[graph_file]
         try:
             overall_tests(
@@ -583,14 +778,15 @@ def run_wa_we_test():
     with open(test_graph_file, "r", encoding="utf-8") as f:
         string = f.read()
         test_graphs = json.loads(string)
-    w = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-    tel = [0.4, 0.5, 0.6, 0.7]
-    teh = [0.5, 0.6, 0.7, 0.8]
+    w = [0.2, 0.3, 0.4, 0.5, 0.6]
+    tel = [0.3, 0.4, 0.5]
+    teh = [0.4, 0.5, 0.6, 0.7]
+    params = [(0.35, 0.3, 0.5), (0.4, 0.4, 0.5), (0.45, 0.3, 0.45), (0.45, 0.4, 0.5)]
     # 开始测试
     for graph_file in test_graphs.keys():
         # 执行测试
-        # if graph_file not in ["cornell", "miserables", "science"]:
-        #     continue
+        if graph_file not in ["cora", "citeseer"]:
+            continue
         setting = test_graphs[graph_file]
         for wa in w:
             we = 1 - wa
@@ -598,37 +794,42 @@ def run_wa_we_test():
                 for h in teh:
                     if l >= h:
                         continue
-                    try:
-                        overall_tests(
-                            graph_file,
-                            d=setting["d"],
-                            walklen=setting["walklen"],
-                            k=setting["k"],
-                            attribute_weight=setting["attribute_weight"],
-                            neighbor_weight=setting["neighbor_weight"],
-                            return_weight=setting["return_weight"],
-                            epochs=setting["epochs"],
-                            seed=setting["seed"],
-                            te=setting["te"],
-                            tel=l,
-                            wa=wa,
-                            we=we,
-                            note="wa{}-we{}-tel{}-teh{}".format(wa, we, l, h),
-                            node_size=setting["node_size"],
-                            edge_width=setting["edge_width"],
-                            edge_alpha=setting["edge_alpha"],
-                            agg_size_min=setting["agg_size_min"],
-                            agg_size_max=setting["agg_size_max"],
-                            agg_width_min=setting["agg_width_min"],
-                            agg_width_max=setting["agg_width_max"],
-                            agg_alpha=setting["agg_alpha"],
-                            teh=h
-                        )
-                    except Exception as e:
-                        exstr = traceback.format_exc()
-                        print(exstr)
-                        make_figure_path(graph_file, "failed", err_msg=exstr)
-                        continue
+        # for p in params:
+        #     wa = p[0]
+        #     we = 1 - p[0]
+        #     l = p[1]
+        #     h = p[2]
+                try:
+                    overall_tests(
+                        graph_file,
+                        d=setting["d"],
+                        walklen=setting["walklen"],
+                        k=setting["k"],
+                        attribute_weight=setting["attribute_weight"],
+                        neighbor_weight=setting["neighbor_weight"],
+                        return_weight=setting["return_weight"],
+                        epochs=setting["epochs"],
+                        seed=setting["seed"],
+                        te=setting["te"],
+                        tel=l,
+                        wa=wa,
+                        we=we,
+                        note="wa{}-we{}-tel{}-teh{}".format(wa, we, l, h),
+                        node_size=setting["node_size"],
+                        edge_width=setting["edge_width"],
+                        edge_alpha=setting["edge_alpha"],
+                        agg_size_min=setting["agg_size_min"],
+                        agg_size_max=setting["agg_size_max"],
+                        agg_width_min=setting["agg_width_min"],
+                        agg_width_max=setting["agg_width_max"],
+                        agg_alpha=setting["agg_alpha"],
+                        teh=h
+                    )
+                except Exception as e:
+                    exstr = traceback.format_exc()
+                    print(exstr)
+                    make_figure_path(graph_file, "failed", err_msg=exstr)
+                    continue
 
 
 def run_pqr_test():

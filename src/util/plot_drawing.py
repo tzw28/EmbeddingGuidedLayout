@@ -1,5 +1,6 @@
 import time
 from src.util.graph_reading import (
+    read_cornell_graph,
     read_json_graph,
     read_facebook_graph,
     read_cora_graph,
@@ -10,7 +11,7 @@ from src.util.graph_reading import (
     read_miserables_graph,
     read_science_graph
 )
-from src.attr2vec.embedding import attributed_embedding
+from src.attr2vec.embedding import attributed_embedding, node2vec_embedding_standard
 from src.layout.reduction import tsne
 from src.layout.nx_fr import nx_fr
 from src.layout.embedding_fr import embedding_fr
@@ -170,6 +171,8 @@ def draw_embedding_fr(
         G, class_map = read_science_graph()
     elif graph_file == "citeseer":
         G, class_map = read_citeseer_graph()
+    elif graph_file == "cornell":
+        G, class_map = read_cornell_graph()
     else:
         G = read_json_graph(graph_file)
     # Embedding
@@ -214,24 +217,31 @@ def draw_embedding_fr(
     # nx.draw_networkx_labels(G, pos, labels=labels)
     nx.draw_networkx_edges(G, pos, width=width, alpha=edge_alpha)
     if fig and ax and click_on:
-        local_vectors, _ = attributed_embedding(
+        # local_vectors, _ = attributed_embedding(
+        #     G,
+        #     neighbor_weight=10,
+        #     epochs=epochs,
+        #     seed=seed,
+        #     virtual_nodes=[],
+        #     graph_name=graph_file)
+        local_vectors, _ = node2vec_embedding_standard(
             G,
-            neighbor_weight=10,
-            epochs=epochs,
+            return_weight=0.5,
+            neighbor_weight=2,
             seed=seed,
-            virtual_nodes=[],
-            graph_name=graph_file)
-        global_vectors, _ = attributed_embedding(
+            graph_name=graph_file,
+       )
+        global_vectors, _ = node2vec_embedding_standard(
             G,
-            return_weight=10,
-            epochs=epochs,
+            return_weight=2,
+            neighbor_weight=0.5,
             seed=seed,
-            virtual_nodes=[],
-            graph_name=graph_file)
+            graph_name=graph_file,
+       )
         virtual_node_list = init_attributed_graph(G)
         attr_vectors, _ = attributed_embedding(
             G,
-            attribute_weight=10,
+            attribute_weight=2,
             epochs=epochs,
             seed=seed,
             virtual_nodes=virtual_node_list,
@@ -341,10 +351,11 @@ def __search_similar_nodes(sel_node, local_mat, global_mat, sim_lim=0.85):
     return local_list, global_list
 
 
-def __search_certain_similar_nodes(sel_node, mat, sim_lim=0.7, lim_number=3):
+def __search_certain_similar_nodes(sel_node, mat, sim_lim=0.6, lim_number=8):
     sim_list = []
     items = mat[sel_node].items()
     sorted_items = sorted(items, key=lambda d: (d[1]), reverse=True)
+    print(sorted_items[:10])
     for node, sim in sorted_items:
         if len(sim_list) > lim_number:
             break

@@ -15,10 +15,13 @@ from src.layout.embedding_fr import embedding_fr
 warnings.filterwarnings("ignore", category=matplotlib.cbook.mplDeprecation)
 
 
-def add_group_attr(G, groups, attribute='ag_group'):
+def add_group_attr(G, groups, group_map, attribute='ag_group'):
     nodes = G.nodes
     for node in nodes.keys():
-        group = groups[node]
+        if group_map:
+            group = group_map[groups[node]]
+        else:
+            group = groups[node]
         nodes[node][attribute] = group
 
 
